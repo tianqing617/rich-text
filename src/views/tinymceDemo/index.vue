@@ -1,5 +1,5 @@
 <template>
-  <div class="editor-wrapper">
+  <div class="tinymce-demo">
     <tinymce ref="editor" v-model="content" />
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped>
-.editor-wrapper {
+.tinymce-demo {
   width: 990px;
   margin: auto;
   margin-top: 90px;
