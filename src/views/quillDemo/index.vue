@@ -23,11 +23,11 @@
 
 <script>
 // 最小包，只包含核心样式
-import 'quill/dist/quill.core.css'
+// import 'quill/dist/quill.core.css'
 // 包含核心样式和snow主题样式
 import 'quill/dist/quill.snow.css'
 // 包含核心样式和bubble主题样式
-import 'quill/dist/quill.bubble.css'
+// import 'quill/dist/quill.bubble.css'
 import Quill from 'quill';
 import { quillEditor } from 'vue-quill-editor'
 
