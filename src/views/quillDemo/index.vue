@@ -14,7 +14,7 @@
     <!-- Or manually control the data synchronization（或手动控制数据流） -->
     <div class="manual">
       <quill-editor :content="content2"
-        :options="editorOption"
+        :options="editorOption2"
         @change="onEditorChange($event)">
       </quill-editor>
     </div>
@@ -27,7 +27,7 @@
 // 包含核心样式和snow主题样式
 import 'quill/dist/quill.snow.css'
 // 包含核心样式和bubble主题样式
-// import 'quill/dist/quill.bubble.css'
+import 'quill/dist/quill.bubble.css'
 import Quill from 'quill';
 import { quillEditor } from 'vue-quill-editor'
 
@@ -44,6 +44,11 @@ export default {
         // some quill options
         // theme: 'bubble',
         theme: 'snow',
+      },
+      editorOption2: {
+        // some quill options
+        // theme: 'bubble',
+        theme: 'bubble',
       }
     }
   },
@@ -84,5 +89,6 @@ export default {
 }
 .manual {
   margin-top: 100px;
+  border: 1px solid #ccc;
 }
 </style>
