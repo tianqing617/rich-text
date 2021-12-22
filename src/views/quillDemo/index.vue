@@ -22,9 +22,13 @@
 </template>
 
 <script>
+// 最小包，只包含核心样式
 import 'quill/dist/quill.core.css'
+// 包含核心样式和snow主题样式
 import 'quill/dist/quill.snow.css'
+// 包含核心样式和bubble主题样式
 import 'quill/dist/quill.bubble.css'
+import Quill from 'quill';
 import { quillEditor } from 'vue-quill-editor'
 
 export default {
@@ -38,8 +42,14 @@ export default {
       content2: '',
       editorOption: {
         // some quill options
+        // theme: 'bubble',
+        theme: 'snow',
       }
     }
+  },
+  mounted() {
+    console.log('this is current quill instance object', this.editor);
+    console.log('quillImports', Quill.imports);
   },
   // 如果需要手动控制数据同步，父组件需要显式地处理changed事件
   methods: {
@@ -62,9 +72,6 @@ export default {
       return this.$refs.myQuillEditor.quill
     }
   },
-  mounted() {
-    console.log('this is current quill instance object', this.editor);
-  }
 }
 </script>
 
